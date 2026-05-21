@@ -23,5 +23,9 @@ public class Pessoa {
         this.age = 0;
     }
 
+    public void mostrarInfo(){
+        System.out.println("Nome: " + name + " Idade: " + age);
+    }
+
     
 }
