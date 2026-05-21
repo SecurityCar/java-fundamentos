@@ -17,5 +17,11 @@ public class Pessoa {
         this.age = age;
     }
 
+    //Sobrecarga
+    public Pessoa(String name){
+        this.name = name;
+        this.age = 0;
+    }
+
     
 }
