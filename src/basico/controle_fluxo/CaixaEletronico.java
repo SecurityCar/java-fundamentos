@@ -8,5 +8,7 @@ public class CaixaEletronico {
         if(valorSolicitado < saldo){
             saldo = saldo - valorSolicitado;
         }
+
+        System.out.println(saldo);
     }
 }
