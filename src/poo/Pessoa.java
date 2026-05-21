@@ -27,5 +27,13 @@ public class Pessoa {
         System.out.println("Nome: " + name + " Idade: " + age);
     }
 
-    
+    public static void main(String[] args) {
+        Pessoa p1 = new Pessoa("Maria Eduarda", 25);
+        Pessoa p2 = new Pessoa("Marcelo");
+        Pessoa p3 = new Pessoa();
+
+        p1.mostrarInfo();
+        p2.mostrarInfo();
+        p3.mostrarInfo();
+    }
 }
