@@ -1,6 +1,7 @@
 package poo.banco;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import poo.banco.cliente.Cliente;
 import poo.banco.conta.Conta;
@@ -22,6 +23,13 @@ public class MainBanco {
         System.out.println(ana);
         System.out.println("---------");
 
+
+        List<Conta> contas = new ArrayList<>();
+        Conta conta1 = new ContaSimples("CS001", vitor);
+        Conta conta2 = new ContaSimples("CS002", ana);
+
+        contas.add(conta1);
+        contas.add(conta2);
 
         
     }
