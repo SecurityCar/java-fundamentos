@@ -12,7 +12,7 @@ import poo.banco.exceptions.SaldoInsuficienteException;
 
 public class MainBanco {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SaldoInsuficienteException {
         System.out.println("Banco Digital || Demonstração dos 4 pilares da POO");
 
         Cliente vitor = new Cliente("Vitor Carvalho", "12345678901", "vitor@email.com");
@@ -30,6 +30,17 @@ public class MainBanco {
 
         contas.add(conta1);
         contas.add(conta2);
+
+        conta1.depositar(1000.0);
+        conta2.depositar(1700);
+
+        System.out.println("Realizando saques:");
+        try {
+            conta1.sacar(900);
+            conta2.sacar(1650);
+        } catch (SaldoInsuficienteException e) {
+            System.err.println("ERRO: " + e.getMessage());
+        }
 
         
     }
