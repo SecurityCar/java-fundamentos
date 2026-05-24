@@ -14,11 +14,22 @@ public class Conta {
         this.titular = titular; 
     }
 
-    public void depositar(double valor){
+    public void depositar(double valor) throws SaldoInsuficienteException {
         if(valor <= 0){
             throw new IllegalArgumentException("O valor a ser depositado deve ser maior do que 0.");
         }
         saldo += valor;
         System.out.printf("O depósito no valor de R$ %.2f foi realizado na conta %s%n", valor, numero);
+    }
+
+    public void sacar(double valor){
+        if(valor <= 0){
+            throw new IllegalArgumentException("O valor a ser sacado deve ser maior do que 0.");
+        }
+        if(valor > saldo){
+            throw new SaldoInsuficienteException("Você não possui saldo suficiente.");
+        }
+        saldo -= valor;
+        System.out.printf("O saque no valor de R$ %.2f foi realizado na conta %s%n", valor, numero);
     }
 }
