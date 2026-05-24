@@ -36,10 +36,15 @@ public class MainBanco {
 
         System.out.println("Realizando saques:");
         try {
-            conta1.sacar(900);
+            conta1.sacar(1001);
             conta2.sacar(1650);
         } catch (SaldoInsuficienteException e) {
             System.err.println("ERRO: " + e.getMessage());
+        }
+
+        System.out.println("Saldo atual das contas: ");
+        for(Conta conta : contas){
+            System.out.println(conta);
         }
 
         
