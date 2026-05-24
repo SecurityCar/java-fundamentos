@@ -22,7 +22,7 @@ public class Conta {
         System.out.printf("O depósito no valor de R$ %.2f foi realizado na conta %s%n", valor, numero);
     }
 
-    public void sacar(double valor){
+    public void sacar(double valor) throws SaldoInsuficienteException{
         if(valor <= 0){
             throw new IllegalArgumentException("O valor a ser sacado deve ser maior do que 0.");
         }
