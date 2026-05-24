@@ -22,4 +22,9 @@ public class Cliente{
     public String getEmail(){
         return email;
     }
+
+    @Override
+    public String toString(){
+        return "Cliente " + nome + " | CPF: " + cpf;
+    }
 }
