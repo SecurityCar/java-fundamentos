@@ -32,4 +32,16 @@ public class Conta {
         saldo -= valor;
         System.out.printf("O saque no valor de R$ %.2f foi realizado na conta %s%n", valor, numero);
     }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public String getNumero(){
+        return numero;
+    }
+
+    public Cliente getTitular(){
+        return titular;
+    }
 }
