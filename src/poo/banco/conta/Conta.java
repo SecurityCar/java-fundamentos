@@ -14,5 +14,11 @@ public class Conta {
         this.titular = titular; 
     }
 
-    
+    public void depositar(double valor){
+        if(valor <= 0){
+            throw new IllegalArgumentException("O valor a ser depositado deve ser maior do que 0.");
+        }
+        saldo += valor;
+        System.out.printf("O depósito no valor de R$ %.2f foi realizado na conta %s%n", valor, numero);
+    }
 }
