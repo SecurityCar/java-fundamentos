@@ -8,7 +8,7 @@ public class Conta {
     protected double saldo;
     protected Cliente titular;
 
-    public Conta(String numero, double saldo, Cliente titular){
+    public Conta(String numero, Cliente titular){
         this.numero = numero;
         this.saldo = 0.0;
         this.titular = titular; 
