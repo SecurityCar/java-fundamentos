@@ -15,7 +15,7 @@ public class MainAgenda{
 
         System.out.println("Minha Agenda: ");
 
-        int opcao;
+        int opcao = 0;
 
         do{
             System.out.println("MENU");
@@ -25,10 +25,14 @@ public class MainAgenda{
 
             switch (opcao) {
                 case 1:
-                    adicionarEvento();
+                    adicionarEvento(scanner, eventos);
                     break;
-            
+
+                case 2: 
+                    listarEventos(eventos);
+                    break;
                 default:
+                    System.out.println("Opção inválida!");
                     break;
             }
         }while(opcao != 3);
