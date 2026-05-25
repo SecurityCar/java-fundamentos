@@ -38,6 +38,7 @@ public class Evento {
     }
 
     public boolean vaiAcontecerHoje(){
+        //Transforma a dataHora em um formato e compara com o LocalDateTime.now(), também transformado
         return dataHora.toLocalDate().equals(LocalDateTime.now().toLocalDate());
     }
 }
