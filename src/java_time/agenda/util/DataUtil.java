@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 
 public class DataUtil {
     
@@ -12,7 +14,7 @@ public class DataUtil {
     public static LocalDateTime parse(String dataHoraStr){
         try {
             return LocalDateTime.parse(dataHoraStr, FORMATTER);
-        } catch (Exception ex) {
+        } catch (DateTimeParseException ex) {
             System.err.println("FORMATO INVALIDO! Utilize: dd/MM/yyyy HH:mm");
             return null;
         }
