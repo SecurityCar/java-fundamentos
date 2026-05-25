@@ -16,4 +16,20 @@ public class Evento {
         this.local = local;
         this.dataHora = dataHora;
     }
+
+    public String getTitulo(){
+        return titulo;
+    }
+
+    public String getDescricao(){
+        return descricao;
+    }
+
+    public String getLocal(){
+        return local;
+    }
+
+    public LocalDateTime getDataHora(){
+        return dataHora;
+    }
 }
