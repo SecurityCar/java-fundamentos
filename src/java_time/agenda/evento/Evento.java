@@ -32,4 +32,10 @@ public class Evento {
     public LocalDateTime getDataHora(){
         return dataHora;
     }
+
+    public boolean estaAtrasado(){
+        return LocalDateTime.now().isAfter(dataHora);
+    }
+
+    
 }
