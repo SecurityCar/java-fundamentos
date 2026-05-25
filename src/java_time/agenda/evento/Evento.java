@@ -37,5 +37,7 @@ public class Evento {
         return LocalDateTime.now().isAfter(dataHora);
     }
 
-    
+    public boolean vaiAcontecerHoje(){
+        return dataHora.toLocalDate().equals(LocalDateTime.now().toLocalDate());
+    }
 }
