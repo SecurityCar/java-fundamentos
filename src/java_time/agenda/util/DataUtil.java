@@ -15,4 +15,8 @@ public class DataUtil {
             return null;
         }
     }
+
+    public static String formatar(LocalDateTime dataHora){
+        return dataHora.format(FORMATTER);
+    }
 }
