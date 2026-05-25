@@ -1,6 +1,8 @@
 package java_time.agenda.util;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 public class DataUtil {
@@ -18,5 +20,11 @@ public class DataUtil {
 
     public static String formatar(LocalDateTime dataHora){
         return dataHora.format(FORMATTER);
+    }
+
+    public static Period calcularDiasRestantes(LocalDateTime dataFutura){
+        LocalDate hoje = LocalDate.now();
+        LocalDate dataAlvo = dataFutura.toLocalDate();
+        return Period.between(hoje, dataAlvo);
     }
 }
