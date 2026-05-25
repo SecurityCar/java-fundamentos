@@ -15,28 +15,27 @@ public class MainAgenda{
 
         System.out.println("Minha Agenda: ");
 
-        int opcao = 0;
+        
+        System.out.println("MENU");
+        System.out.println("1. Adicionar um novo evento");
+        System.out.println("2. Listar todos os eventos");
+        System.out.println("3. Sair");
 
-        do{
-            System.out.println("MENU");
-            System.out.println("1. Adicionar um novo evento");
-            System.out.println("2. Listar todos os eventos");
-            System.out.println("3. Sair");
-
-            switch (opcao) {
-                case 1:
-                    adicionarEvento(scanner, eventos);
-                    break;
-
-                case 2: 
-                    listarEventos(eventos);
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
-                    break;
-            }
-        }while(opcao != 3);
-        scanner.close();
+        int opcao = scanner.nextInt();
+        scanner.nextLine();
+        
+        switch (opcao) {
+            case 1:
+                adicionarEvento(scanner, eventos);
+                break;
+            case 2:
+                listarEventos(eventos);
+            case 3:
+                scanner.close();
+            default:
+                System.out.println("Opção Inválida!");
+                break;
+        }
     }
 
     private static void adicionarEvento(Scanner scanner, List<Evento> eventos){
